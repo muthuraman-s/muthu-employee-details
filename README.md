@@ -1,2 +1,2 @@
-# quote-a-day
-Node JS - Module 1
+# MEAN Application using Angular Js
+Employee Details - Using Angular Js (CURD Operation)
