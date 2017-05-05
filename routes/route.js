@@ -3,22 +3,22 @@ var Employee = mongoose.model( 'Employee' );
 
 exports.addEmployee=function(req,res){
                   var name=req.body.name;
-                  var email=req.body.email;                  
+                  var email=req.body.email;
                   var dob=req.body.dob;
                   var gender=req.body.gender;
                   var department=req.body.department;
-                 
+
                   var today = new Date();
                   var dateOfBirth=new Date(dob);
                   var yearDifference = today.getFullYear() - dateOfBirth.getFullYear();
                   var monthDifference = today.getMonth() - dateOfBirth.getMonth();
-                  if (monthDifference < 0 
-                      || (monthDifference === 0 && today.getDate() < dateOfBirth.getDate())) 
+                  if (monthDifference < 0
+                      || (monthDifference === 0 && today.getDate() < dateOfBirth.getDate()))
                   {
                                  yearDifference--;
                   }
                   var age=yearDifference;
-                 
+
 
                   if(gender !== "Male" & gender !== "Female"){
                     var message="ERROR : Bad Request, Invalid value for gender ";
@@ -95,7 +95,7 @@ exports.updateEmployee=function(req,res)
                                    }
                                    else{
                                           var name=req.body.name;
-                                          var email=req.body.email;                                          
+                                          var email=req.body.email;
                                           var dob=req.body.dob;
                                           var gender=req.body.gender;
                                           var department=req.body.department;
@@ -111,7 +111,7 @@ exports.updateEmployee=function(req,res)
                                               age=yearDifference;
 
                                         record.name=name;
-                                        record.email=email;                                        
+                                        record.email=email;
                                         record.dob=dob;
                                         record.age=age;
                                         record.department=department;

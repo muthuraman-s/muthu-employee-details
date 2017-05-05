@@ -1,7 +1,12 @@
 var chalk = require('chalk');
 var mongoose = require( 'mongoose' );
 
-var dbURI = 'mongodb://localhost/employee_details';
+/*
+* Mlabs Db Connection format.
+* mongodb://<dbuser>:<dbpassword>@ds113680.mlab.com:13680/employeerecords
+*/
+var dbURI = 'mongodb://muthu:muthu@ds113680.mlab.com:13680/employeerecords';
+//var dbURI = 'mongodb://localhost/employee_details'; localhost
 
 mongoose.connect(dbURI);
 
@@ -27,5 +32,3 @@ var employeeSchema = new mongoose.Schema({
 });
 
 mongoose.model( 'Employee', employeeSchema );
-
-
