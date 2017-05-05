@@ -9,7 +9,7 @@
   "author": "Muthuraman Sethuramalingam",
   "license": "Mindtree - Team",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
     "body-parser": "1.15.0",
     "chalk": "1.1.1",
     "mongoose": "4.4.4"
